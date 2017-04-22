@@ -1,0 +1,26 @@
+alias: "Suns down lights on"
+trigger:
+  platform: sun
+  event: sunset
+  offset: "-00:45:00"
+condition:
+  condition: state
+  entity_id: group.all_devices
+  state: home
+action: 
+  service: homeassistant.turn_on
+  entity_id: group.living_room_lights
+  
+#alias: "Close Garge Door at Night"
+#trigger: 
+#  platform: mqtt
+#  mqtt_topic: garage/door/status
+#  mqtt_payload: 'OPEN'
+#  platform: sun
+#  event: sunset
+#  offset: "-00:45:00"
+#action:
+#  service: mqtt.publish
+#  data:
+#    topic: "garage/door/status/cycle"
+#    payload: "CYCLE"

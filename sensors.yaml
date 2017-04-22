@@ -1,0 +1,46 @@
+- platform: yweather
+  woeid: !secret yweather_woeid
+  forecast: 1
+  name: yw_day1
+  monitored_conditions:
+    - weather
+    - temp_min
+    - temp_max
+    - wind_speed
+    - humidity
+- platform: yweather
+  woeid: !secret yweather_woeid
+  forecast: 2
+  name: yw_day2
+  monitored_conditions:
+    - weather
+    - temp_min
+    - temp_max
+    - wind_speed
+    - humidity
+- platform: yweather
+  woeid: !secret yweather_woeid
+  forecast: 3
+  name: yw_day3
+  monitored_conditions:
+    - weather
+    - temp_min
+    - temp_max
+    - wind_speed
+    - humidity
+- platform: time_date
+  display_options:
+    - "date_time"
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+- platform: moon

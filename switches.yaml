@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Garage Door Cycler"
+  state_topic: !secret garage_door_state
+  command_topic: !secret garage_door_command
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+  

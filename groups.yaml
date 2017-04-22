@@ -1,0 +1,111 @@
+default_view:
+  view: yes
+  name: Home
+  icon: mdi:home
+  entities:
+    - sensor.yr_symbol
+    - sun.sun
+    - group.weather_forecast
+    - group.family
+    - group.living_room_lights
+    - group.hassbian
+    - media_player.living_room_atv
+lights:
+  view: yes
+  name: Lights
+  icon: mdi:lightbulb-on-outline
+  entities:
+    - group.living_room_lights
+    - group.misc_lights
+devices:
+  view: yes
+  name: Device
+  icon: mdi:cellphone-link
+  entities:
+    - group.computers
+    - group.iot
+    - group.outlets
+speed:
+  view: yes
+  name: Speed Test
+  icon: mdi:speedometer
+  entities:
+    - group.speedtest
+    
+    
+###GROUPS###
+living_room_lights:
+  name: Living Room Lights
+  entities:
+    - light.chair_lamp
+    - light.green_star
+    - light.living_room
+    - light.supernova
+    - light.tv_lamp
+    - input_boolean.living_room_lockout
+misc_lights:
+  name: Miscellaneous Lights
+  entities:
+    - light.dimmable_light_1
+living_room:
+  name: Living Room
+  entities:
+    - light.chair_lamp
+    - light.green_star
+    - light.living_room
+    - light.supernova
+    - light.tv_lamp
+    - switch.living_room_entertainment
+    - media_player.living_room_atv
+iot:
+  name: IOT
+  entities:
+    - device_tracker.amazonf572bd132
+    - device_tracker.hs105
+    - switch.ge_12720_outdoor_smart_switch_switch_3_0
+family:
+  name: Family
+  entities:
+    - device_tracker.ashersphone
+    - device_tracker.strangerdanger
+    - device_tracker.ambers_iphone
+computers:
+  name: Computers
+  entities:
+    - device_tracker.macbuntu
+    - device_tracker.raspcam1
+outlets:
+  name: Outlets
+  entities:
+    - switch.hs105
+hassbian:
+  name: Hassbian
+  entities:
+    - sensor.cpu_use
+    - sensor.disk_free_home
+    - sensor.last_boot
+    - sensor.ram_free
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+weather_forecast:
+  name: Weater Forecast
+  entities:
+    - sensor.yw_day1_condition
+    - sensor.yw_day1_humidity
+    - sensor.yw_day1_temperature_min
+    - sensor.yw_day1_temperature_max
+    - sensor.yw_day1_wind_speed
+    - sensor.yw_day2_condition
+    - sensor.yw_day2_humidity
+    - sensor.yw_day2_temperature_min
+    - sensor.yw_day2_temperature_max
+    - sensor.yw_day2_wind_speed
+    - sensor.yw_day3_condition
+    - sensor.yw_day3_humidity
+    - sensor.yw_day3_temperature_min
+    - sensor.yw_day3_temperature_max
+    - sensor.yw_day3_wind_speed
